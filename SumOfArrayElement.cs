@@ -10,6 +10,11 @@
 // Input: n = 5, arr = [10, 20, 30, 40, 50]  
 // Output: 150
 
+// Complexity Analysis
+// Time Complexity: O(n) 
+// Space Complexity: O(n) 
+// Optimized approach (without storing array) → O(1) space
+
 using System;
 
 public class HelloWorld
@@ -40,10 +45,3 @@ public class HelloWorld
         Console.WriteLine("Sum of array elements = " + result);
     }
 }
-
-
-
-// Complexity Analysis
-// Time Complexity: O(n) 
-// Space Complexity: O(n) 
-// Optimized approach (without storing array) → O(1) space
