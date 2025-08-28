@@ -44,6 +44,6 @@ public class HelloWorld
 
 
 // Complexity Analysis
-// Time Complexity: O(n) → must traverse all elements once.
-// Space Complexity: O(n) → due to storing the array.
-// Optimized approach (without storing array) → O(1) space.
+// Time Complexity: O(n) 
+// Space Complexity: O(n) 
+// Optimized approach (without storing array) → O(1) space
