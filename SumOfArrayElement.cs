@@ -17,7 +17,7 @@
 
 using System;
 
-public class HelloWorld
+public class ArraySum
 {
     static int SumArr(int[] arr)
     {
