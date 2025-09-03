@@ -1,50 +1,47 @@
-// Problem: Separate Even and Odd Numbers in an Array
+// Problem: Separate Even and Odd Numbers in an Array with Counts
 
 // Question:
-// Write a program to take an array of integers from the user
-// and separate the even and odd numbers, displaying them separately.
+// Write a program to separate even and odd numbers from a predefined array,
+// and display both the count and the actual numbers for each category.
 
 // Input:
-// First line: integer n (size of array)
-// Next n lines: array elements
+// Predefined array in code (can be modified)
 
 // Output:
-// Even numbers and odd numbers displayed separately
+// Count of even numbers
+// Count of odd numbers
+// Even numbers list
+// Odd numbers list
 
 // Example:
-// Input: [1, 2, 3, 4, 5, 6]
+// Input: arr = { 3, 2, 2, 6, 8, 7, 9 }
 // Output:
-// Even Numbers: 2 4 6
-// Odd Numbers: 1 3 5
+// Count of even numbers: 4
+// Count of odd numbers: 3
+// Even numbers: 2, 2, 6, 8
+// Odd numbers: 3, 7, 9
 
 // Notes:
-// Traverse the array once, check each number with modulus operator,
-// and categorize into even and odd.
+// Traverse the array, separate numbers into even and odd lists,
+// then display counts and elements.
 
 // Complexity:
-// Time Complexity: O(n)  (each element checked once)
-// Space Complexity: O(n)  (for storing even and odd arrays)
+// Time Complexity: O(n)  (each element visited once)
+// Space Complexity: O(n)  (for storing even and odd numbers)
 
 using System;
 using System.Collections.Generic;
 
-public class SeparateEvenOdd
+public class SeparateEvenOddWithCount
 {
     public static void Main(string[] args)
     {
-        Console.Write("Enter size of array: ");
-        int n = Convert.ToInt32(Console.ReadLine());
-
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++)
-        {
-            Console.Write($"Enter element {i + 1}: ");
-            arr[i] = Convert.ToInt32(Console.ReadLine());
-        }
+        int[] arr = { 3, 2, 2, 6, 8, 7, 9 };
 
         List<int> even = new List<int>();
         List<int> odd = new List<int>();
 
+        // Separate even and odd numbers
         foreach (int num in arr)
         {
             if (num % 2 == 0)
@@ -53,7 +50,12 @@ public class SeparateEvenOdd
                 odd.Add(num);
         }
 
-        Console.WriteLine("Even Numbers: " + string.Join(" ", even));
-        Console.WriteLine("Odd Numbers: " + string.Join(" ", odd));
+        // Display counts
+        Console.WriteLine("Count of even numbers: " + even.Count);
+        Console.WriteLine("Count of odd numbers: " + odd.Count);
+
+        // Display the actual numbers
+        Console.WriteLine("Even numbers: " + string.Join(", ", even));
+        Console.WriteLine("Odd numbers: " + string.Join(", ", odd));
     }
 }

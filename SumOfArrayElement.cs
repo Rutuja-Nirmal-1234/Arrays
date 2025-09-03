@@ -12,12 +12,12 @@
 
 // Complexity Analysis
 // Time Complexity: O(n) 
-// Space Complexity: O(n) 
-// Optimized approach (without storing array) → O(1) space
+// Space Complexity: O(1) 
+
 
 using System;
 
-public class ArraySum
+public class HelloWorld
 {
     static int SumArr(int[] arr)
     {
@@ -45,3 +45,6 @@ public class ArraySum
         Console.WriteLine("Sum of array elements = " + result);
     }
 }
+
+
+
